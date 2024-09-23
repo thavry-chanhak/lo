@@ -1,0 +1,82 @@
+* {  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+}  
+
+nav {  
+    font-family: 'Poppins', sans-serif;  
+    display: flex;  
+    align-items: center;  
+    justify-content: space-between;  
+    background-color: #2c8eec; 
+    padding: 1em;  
+}  
+
+nav a {  
+    text-decoration: none;  
+    text-transform: capitalize;  
+    color: white;  
+}  
+
+#logo {  
+    font-size: 1.2em;  
+    font-weight: 600;  
+}  
+
+input[type="checkbox"] {  
+    display: none;
+}  
+
+label {  
+    display: none; 
+    cursor: pointer;
+}  
+
+ul {  
+    list-style: none;  
+    display: flex;  
+    gap: 0.1em; 
+}  
+
+ul a {  
+    padding: 0.5em;  
+}  
+
+ul a:hover {  
+    background-color: #333333;   
+    border-radius: 0.5em;
+}
+
+.active {  
+    border-bottom: 2px solid white;
+}  
+
+@media screen and (max-width: 600px) {  
+    label {  
+        display: block; 
+    }  
+
+    ul {  
+        font-size: 1.2em;
+        gap: 2em;
+        position: absolute;  
+        left: -100%; 
+        flex-direction: column; 
+        top: 60px; 
+        width: 100%;  
+        height: calc(100vh - 30px);  
+        background-color: #333333; 
+        transition: 0.5s;
+        align-items: center;
+        height: calc(100vh-60px);
+        justify-content: center;
+    }  
+
+    input[type="checkbox"]:checked ~ ul {  
+        left: 0; 
+    }
+    ul a:hover{
+        background-color: #2c8eec;
+    }
+}
